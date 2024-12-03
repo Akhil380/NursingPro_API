@@ -237,7 +237,7 @@ def get_question_sets(
 @router.get("/questions_by_set_and_test", response_model=List[QuestionSchema])
 def get_questions_by_set_and_test(
         category: Optional[str],  # setName/category
-        test_no: Optional[int],  # testNo
+        test_no: Optional[str],  # testNo
         db: Session = Depends(get_db),
         current_user: TokenData = Depends(get_current_user),
 ):
